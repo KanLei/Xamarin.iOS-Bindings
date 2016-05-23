@@ -1,6 +1,6 @@
 ﻿using Foundation;
 using UIKit;
-using AlipaySDKBinding.iOS;
+using AlipaySDKBinding;
 using System.Diagnostics;
 
 namespace AlipaySDKBindingDemo

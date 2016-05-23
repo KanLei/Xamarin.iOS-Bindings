@@ -25,17 +25,15 @@ namespace AlipaySDKBinding.iOS
 
         // -(NSString *)description;
         [Export ("description")]
-        //        [Verify (MethodToProperty)]
         string Description { get; }
 
         // -(NSString *)wapDescription;
         [Export ("wapDescription")]
-        //        [Verify (MethodToProperty)]
         string WapDescription { get; }
     }
 
     // typedef void (^CompletionBlock)(NSDictionary *);
-    delegate void CompletionBlock (NSDictionary resultDic);
+    delegate void CompletionBlock (NSDictionary arg0);
 
     // @interface AlipaySDK : NSObject
     [BaseType (typeof(NSObject))]
@@ -44,7 +42,6 @@ namespace AlipaySDKBinding.iOS
         // +(AlipaySDK *)defaultService;
         [Static]
         [Export ("defaultService")]
-        //        [Verify (MethodToProperty)]
         AlipaySDK DefaultService { get; }
 
         // -(void)payOrder:(NSString *)orderStr fromScheme:(NSString *)schemeStr callback:(CompletionBlock)completionBlock;
@@ -55,14 +52,16 @@ namespace AlipaySDKBinding.iOS
         [Export ("processOrderWithPaymentResult:standbyCallback:")]
         void ProcessOrderWithPaymentResult (NSUrl resultUrl, CompletionBlock completionBlock);
 
+        // -(NSString *)fetchTradeToken;
+        [Export ("fetchTradeToken")]
+        string FetchTradeToken { get; }
+
         // -(BOOL)isLogined;
         [Export ("isLogined")]
-        //        [Verify (MethodToProperty)]
         bool IsLogined { get; }
 
         // -(NSString *)currentVersion;
         [Export ("currentVersion")]
-        //        [Verify (MethodToProperty)]
         string CurrentVersion { get; }
 
         // -(NSString *)queryTidFactor:(AlipayTidFactor)factor;
@@ -97,6 +96,5 @@ namespace AlipaySDKBinding.iOS
         [Export ("processAuth_V2Result:standbyCallback:")]
         void ProcessAuth_V2Result (NSUrl resultUrl, CompletionBlock completionBlock);
     }
-
 }
 

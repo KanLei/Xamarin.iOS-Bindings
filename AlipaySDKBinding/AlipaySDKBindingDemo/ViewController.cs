@@ -1,8 +1,8 @@
 ﻿using System;
 
 using UIKit;
-using AlipaySDKBinding.iOS;
 using System.Diagnostics;
+using AlipaySDKBinding;
 
 namespace AlipaySDKBindingDemo
 {
@@ -22,6 +22,7 @@ namespace AlipaySDKBindingDemo
         {
             base.ViewDidAppear(animated);
 
+            Debug.WriteLine(AlipaySDK.DefaultService.CurrentVersion);
            
             AlipaySDK.DefaultService.PayOrder("", "", (resultDic) =>
                 {

@@ -101,9 +101,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\AlipaySDKBinding.iOS\AlipaySDKBinding.iOS.csproj">
-      <Project>{6283EE84-B629-4183-A807-1ECC689EB57B}</Project>
-      <Name>AlipaySDKBinding.iOS</Name>
+    <ProjectReference Include="..\AlipaySDKBinding\AlipaySDKBinding.csproj">
+      <Project>{41C6E769-9A5E-45E9-AECD-160657CA898E}</Project>
+      <Name>AlipaySDKBinding</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
