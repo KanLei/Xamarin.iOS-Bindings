@@ -1,0 +1,12 @@
+2016.06.12
+支持 bitcode
+
+2016.04.12
+新增图片分享功能
+分享回调代理方法名由 - (void)shareToMeipaiDidSuccess:(BOOL)success; 替换为 - (void)shareToMeipaiDidSucceed:(BOOL)success;
+
+2016.03.16
+修复美拍返回第三方应用时，第三方名称显示错误的 bug
+
+2015.10.22
+添加视频分享功能
