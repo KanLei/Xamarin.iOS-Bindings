@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0620FC1-E1B9-4A67-8A55-4B5FF7E3B17A}</ProjectGuid>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ALITrade.iOS</RootNamespace>
+    <AssemblyName>ALITrade.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AlibabaAuthExt.linkwith.cs">
+      <DependentUpon>AlibabaAuthExt.a</DependentUpon>
+    </Compile>
+    <Compile Include="AlibabaAuthSDK.linkwith.cs">
+      <DependentUpon>AlibabaAuthSDK.a</DependentUpon>
+    </Compile>
+    <Compile Include="AlibcTradeSDK.linkwith.cs">
+      <DependentUpon>AlibcTradeSDK.a</DependentUpon>
+    </Compile>
+    <Compile Include="OpenMtopExt.linkwith.cs">
+      <DependentUpon>OpenMtopExt.a</DependentUpon>
+    </Compile>
+    <Compile Include="OpenMtopSDK.linkwith.cs">
+      <DependentUpon>OpenMtopSDK.a</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityGuardSDK.linkwith.cs">
+      <DependentUpon>SecurityGuardSDK.a</DependentUpon>
+    </Compile>
+    <Compile Include="UTDID.linkwith.cs">
+      <DependentUpon>UTDID.a</DependentUpon>
+    </Compile>
+    <Compile Include="TBAppLinkSDK.linkwith.cs">
+      <DependentUpon>TBAppLinkSDK.a</DependentUpon>
+    </Compile>
+    <Compile Include="UTMini.linkwith.cs">
+      <DependentUpon>UTMini.a</DependentUpon>
+    </Compile>
+    <Compile Include="SGMain.linkwith.cs">
+      <DependentUpon>SGMain.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="ApiDefinitiones\Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="ApiDefinitiones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="AlibabaAuthExt.a" />
+    <ObjcBindingNativeLibrary Include="AlibabaAuthSDK.a" />
+    <ObjcBindingNativeLibrary Include="AlibcTradeSDK.a" />
+    <ObjcBindingNativeLibrary Include="OpenMtopExt.a" />
+    <ObjcBindingNativeLibrary Include="OpenMtopSDK.a" />
+    <ObjcBindingNativeLibrary Include="SecurityGuardSDK.a" />
+    <ObjcBindingNativeLibrary Include="UTDID.a" />
+    <ObjcBindingNativeLibrary Include="TBAppLinkSDK.a" />
+    <ObjcBindingNativeLibrary Include="UTMini.a" />
+    <ObjcBindingNativeLibrary Include="SGMain.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NBResource.bundle\Root.plist" />
+    <BundleResource Include="Resources\NBResource.bundle\back%402x.png" />
+    <BundleResource Include="Resources\NBResource.bundle\back%403x.png" />
+    <BundleResource Include="Resources\NBResource.bundle\close%402x.png" />
+    <BundleResource Include="Resources\NBResource.bundle\close%403x.png" />
+    <BundleResource Include="Resources\NBResource.bundle\localConfig.json" />
+    <BundleResource Include="Resources\NBResource.bundle\urlConfig.json" />
+    <BundleResource Include="Resources\NBResource.bundle\whiteClose%402x.png" />
+    <BundleResource Include="Resources\NBResource.bundle\whiteClose%403x.png" />
+    <BundleResource Include="Resources\NBResource.bundle\en.lproj\Root.strings" />
+    <BundleResource Include="Resources\AlibabaAuthSDK.bundle\alibaba_auth_sdk.png" />
+    <BundleResource Include="Resources\AlibabaAuthSDK.bundle\alimember_navbar_left%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitiones\AlibcTradeSDK_ApiDefinition.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+</Project>
