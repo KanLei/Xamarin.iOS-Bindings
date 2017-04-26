@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{9E29EC3D-3051-43EA-8F8F-7810EECC4015}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BugtagsBinding.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BugtagsBinding.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bugtags.linkwith.cs">
+      <DependentUpon>Bugtags.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="Bugtags.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bugtags.bundle\Bugtags_dsym_autoupload.sh" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_bg_dialog%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_bg_tag%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_btn_cancel%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_btn_cancel_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_btn_confirm%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_btn_confirm_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_capture.mp3" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_account%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_arrow%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_arrow_left%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_arrow_left_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_arrow_right%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_arrow_right_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_arrow_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_assistivebutton%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_assistivebutton_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_assistivebutton_submit%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_assistivebutton_submit_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_avatar_placeholder%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_cancel%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_cancel_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_captcha%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_checkmark%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_confirm%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_confirm_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_delete%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_delete_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_exchange%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_exchange_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_issue_type_1%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_issue_type_2%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_password%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_0%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_0_normal%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_0_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_1%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_1_normal%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_1_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_2%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_2_normal%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_2_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_3%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_3_normal%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_priority_3_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_quicksignin%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_quicksignin_selected%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_report%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_report_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_tag_pin%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_tag_type_1%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_tag_type_2%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_tips_tag_1%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_tips_tag_2%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_tips_tag_3%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_user%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_icon_user_pressed%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_line%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_line_vertical%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\btg_logo%402x.png" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGCreateTagView-Landscape.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGCreateTagView-Landscape.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGCreateTagView.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGCreateTagView.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGCreateTagView~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGCreateTagView~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGSignInViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGSignInViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGSignInViewController~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGSignInViewController~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGTagTipsView.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGTagTipsView.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGTagTipsView~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\BTGTagTipsView~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\Bugtags.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Bugtags.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Bugtags.bundle\zh-Hant.lproj\Localizable.strings" />
+  </ItemGroup>
+</Project>
